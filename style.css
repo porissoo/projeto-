@@ -9,7 +9,7 @@ body {
   background-color: #f5f5f5;
 }
 
-/* HEADER */
+
 header {
   background-color: #111;
   color: #fff;
@@ -38,7 +38,7 @@ nav ul li a:hover {
   color: #f39c12;
 }
 
-/* BANNER */
+
 .banner {
   background: url('https://images.unsplash.com/photo-1521334884684-d80222895322') center/cover no-repeat;
   height: 300px;
@@ -54,7 +54,7 @@ nav ul li a:hover {
   border-radius: 5px;
 }
 
-/* PRODUTOS */
+
 .produtos {
   padding: 40px;
   max-width: 1200px;
@@ -109,7 +109,7 @@ nav ul li a:hover {
   background-color: #f39c12;
 }
 
-/* FOOTER */
+
 footer {
   background-color: #111;
   color: #fff;
@@ -118,10 +118,4 @@ footer {
   margin-top: 40px;
 }
 
-/* RESPONSIVO */
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-}
+
