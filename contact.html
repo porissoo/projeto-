@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Contacto - Fashion Store</title>
+</head>
+<body>
+  <header>
+    <h1>Fashion Store</h1>
+    <nav>
+      <ul>
+        <li><a href="main.html">Início</a></li>
+        <li><a href="homem.html">Masculino</a></li>
+        <li><a href="mulher.html">Feminino</a></li>
+        <li><a href="contact.html" class="active">Contato</a></li>
+        <li><a href="#" id="cart-btn" class="cart-link">Carrinho <span id="cart-count" class="cart-count">0</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="produtos" style="max-width:800px;margin:auto;padding:40px 20px;">
+    <h2>Fale Conosco</h2>
+    <form id="contact-form" action="#" method="post">
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" name="nome" required style="width:100%;padding:8px;margin:8px 0;border:1px solid #ccc;border-radius:4px;">
+
+      <label for="email">E‑mail</label>
+      <input type="email" id="email" name="email" required style="width:100%;padding:8px;margin:8px 0;border:1px solid #ccc;border-radius:4px;">
+
+      <label for="assunto">Assunto</label>
+      <input type="text" id="assunto" name="assunto" style="width:100%;padding:8px;margin:8px 0;border:1px solid #ccc;border-radius:4px;">
+
+      <label for="mensagem">Mensagem</label>
+      <textarea id="mensagem" name="mensagem" rows="6" required style="width:100%;padding:8px;margin:8px 0;border:1px solid #ccc;border-radius:4px;"></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+    <div id="form-msg" aria-live="polite" style="margin-top:12px;color:green;font-weight:600;"></div>
+    
+    <div style="margin-top:20px;color:#555">
+      <p><strong>Telefone:</strong> (11) 98765-4321</p>
+      <p><strong>Email:</strong> contacto@fashionstore.ex</p>
+      <p><strong>Endereço:</strong> Rua Exemplo, 123 — Cidade</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Fashion Store. Todos os direitos reservados.</p>
+    <p><a href="main.html">Voltar ao Início</a></p>
+  </footer>
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nome = document.getElementById('nome').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const mensagem = document.getElementById('mensagem').value.trim();
+      const formMsg = document.getElementById('form-msg');
+      
+      if (!nome || !email || !mensagem) {
+        formMsg.textContent = 'Por favor, preencha todos os campos obrigatórios.';
+        formMsg.style.color = '#e74c3c';
+        return;
+      }
+      
+      formMsg.textContent = 'Mensagem enviada com sucesso! Obrigado por entrar em contato!';
+      formMsg.style.color = '#27ae60';
+      this.reset();
+    });
+  </script>
+</body>
+</html>

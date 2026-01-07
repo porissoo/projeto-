@@ -95,6 +95,16 @@ nav ul li a:hover {
   margin-bottom: 10px;
 }
 
+.card .price {
+  color: #111;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card .details {
+  padding: 0 15px 15px;
+}
+
 .card button {
   background-color: #111;
   color: #fff;
@@ -109,6 +119,21 @@ nav ul li a:hover {
   background-color: #f39c12;
 }
 
+.card:hover {
+  transform: translateY(-6px);
+  transition: transform 0.18s ease;
+}
+
+nav ul li a.active {
+  color: #f39c12;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .banner { height: 200px; }
+  .card img { height: 180px; }
+}
+
 
 footer {
   background-color: #111;
@@ -118,4 +143,178 @@ footer {
   margin-top: 40px;
 }
 
+.cart-link {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 6px 10px;
+  border-radius: 20px;
+}
+
+.cart-count {
+  background: #f39c12;
+  color: #111;
+  padding: 2px 6px;
+  border-radius: 12px;
+  font-weight: 700;
+  margin-left: 6px;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal {
+  background: #fff;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 6px 30px rgba(0,0,0,0.25);
+}
+
+
+
+.toast {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #111;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 10000;
+}
+
+
+form label { display:block; margin-top:10px; font-weight:600; }
+form button { margin-top:12px; }
+
+/* Estilos do Carrinho */
+.cart-link {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+
+.cart-count {
+  background-color: #f39c12;
+  color: #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+/* Modal do Carrinho */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  color: #111;
+}
+
+.modal-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.modal-content li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-content li:last-child {
+  border-bottom: none;
+}
+
+.item-controls {
+  display: flex;
+  gap: 5px;
+}
+
+.item-controls button {
+  padding: 5px 10px;
+  background-color: #f39c12;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.item-controls button:hover {
+  background-color: #e67e22;
+}
+
+.modal-content h3 {
+  text-align: right;
+  color: #111;
+  margin-top: 15px;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.checkout-btn:hover {
+  background-color: #229954;
+}
 
